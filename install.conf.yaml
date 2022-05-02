@@ -1,0 +1,17 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+    shell:
+      stdout: true
+      stderr: true
+
+# - shell:
+#   - [chsh -s $(which zsh), Making zsh the default shell]
+
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.p10k.zsh: p10k.zsh
+    ~/.zshrc: zshrc
