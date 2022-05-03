@@ -6,11 +6,9 @@
       stderr: true
 
 - shell:
-  - [apt update && apt upgrade, Updating system...]
   - [apt install zsh, Installing zsh]
   - [chsh -s $(which zsh), Making zsh the default shell]
   - [sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)", Installing oh-my-zsh]
-  - [git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k, Installing zsh theme]
 
 - clean: ['~']
 
